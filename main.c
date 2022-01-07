@@ -10,19 +10,11 @@ int main(void) {
   char s[10];
   fscanf(fptr,"%s",s);
   printf("%s\n",s);
-  // int x;
-  // fscanf(fptr,"%d",&x);
-  // printf("%d\n",x);
   while(!feof(fptr)){
     //feof checks for end of file
     fscanf(fptr,"%s",s);
     printf("%s\n",s);
   }
-  //Option 3: 
-  // char ss[100];
-  // while(fgets(ss,100,fptr)!=NULL){
-  //   printf("%s\n",s);
-  // }
   }
   fclose(fptr);
   program();
@@ -30,7 +22,7 @@ int main(void) {
   FILE* fptr5=fopen("textdata.txt","w");
   fprintf(fptr5,"%s","-12345");
   fclose(fptr5);
-  // //as binary
+  //as binary
   FILE* fptr6=fopen("binarydata.test","wb");
   //extension doesn't matter here, it's just binary
   int arr[3]={100,200,300};
@@ -56,9 +48,7 @@ int main(void) {
   fread(&arr,sizeof(int)*3,3,fptr7);
   printf("%d\n",*arr);
   fclose(fptr7);
-  //more stuff
   FILE* fptr8=fopen("binarydata.test","rb");
-  //int num_of_values=
   fclose(fptr8);
   structure();
   read();
